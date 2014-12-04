@@ -1,0 +1,14 @@
+{
+    "name": "maicoin/maicoin",
+    "description": "Maicoin API library",
+    "keywords": ["bitcoin", "maicoin"],
+    "homepage": "https://maicoin.com",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {"MaiCoin": "lib/"}
+    },
+    "require": {
+        "php": ">=5.2.0"
+    }
+}
