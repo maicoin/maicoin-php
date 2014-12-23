@@ -92,7 +92,8 @@ class MaiCoin
     ##### Buy BTC
     public function buyBtc($amount)
     {
-        return $this->post("orders/buy_btc", array(
+        return $this->post("orders", array(
+            "type" => "buy",
             "amount" => $amount
         ));
     }
@@ -100,7 +101,8 @@ class MaiCoin
     ##### Sell BTC
     public function sellBtc($amount)
     {
-        return $this->post("orders/sell_btc", array(
+        return $this->post("orders", array(
+            "type" => "sell",
             "amount" => $amount
         ));
     }
@@ -122,7 +124,8 @@ class MaiCoin
     ##### Request btc
     public function requestBtc($address, $amount, $currency, $notes=null)
     {
-        return $this->post("transactions/request_btc", array(
+        return $this->post("transactions", array(
+            "type" => "request",
             "address" => $address,
             "amount" => $amount,
             "currency" => $currency,
