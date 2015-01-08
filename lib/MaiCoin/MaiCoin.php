@@ -136,7 +136,7 @@ class MaiCoin
     ##### Cancel request btc
     public function cancelRequestBtc($txid)
     {
-        return $this->delete("transactions/".$txid."/cancel_request_btc");
+        return $this->delete("transactions/".$txid);
     }
     ##### Create checkout
     public function createCheckout($checkoutParam)
